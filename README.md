@@ -1,4 +1,4 @@
-# Mobile Bank App
+# Mobile Banking App
 
 A digital banking application.
 
