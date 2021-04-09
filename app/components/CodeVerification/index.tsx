@@ -19,7 +19,6 @@ export default function CodeVerification() {
         keyboardType="numeric"
         maxLength={1}
         selectionColor="#2573D5"
-        isFocused
         returnKeyType="next"
         onChangeText={value => {
           setCode1(value);
@@ -39,7 +38,6 @@ export default function CodeVerification() {
         keyboardType="numeric"
         maxLength={1}
         selectionColor="#2573D5"
-        isFocused
         returnKeyType="next"
         onChangeText={value => {
           setCode2(value);
@@ -58,10 +56,9 @@ export default function CodeVerification() {
         keyboardType="numeric"
         maxLength={1}
         selectionColor="#2573D5"
-        isFocused
         returnKeyType="next"
         onChangeText={value => {
-          setCode4(value);
+          setCode3(value);
           refBredoomInput.focus();
         }}
         onSubmitEditing={() => {
@@ -77,8 +74,10 @@ export default function CodeVerification() {
         keyboardType="numeric"
         maxLength={1}
         selectionColor="#2573D5"
-        isFocused
         returnKeyType="done"
+        onChangeText={value => {
+          setCode4(value);
+        }}
       />
     </Container>
   );

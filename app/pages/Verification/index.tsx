@@ -1,10 +1,20 @@
-import React, {useState} from 'react';
-import {Container, Back, CardContainer, Title, Information} from './styles';
+import React from 'react';
+import {
+  Container,
+  Back,
+  CardContainer,
+  Title,
+  Information,
+  FooterContainer,
+  ButtonContinue,
+  TextContinue,
+} from './styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import CodeVerification from '../../components/CodeVerification';
+import Coutdown from '../../components/Countdown';
 
-export default function Verification({navigation}: any) {
-  const [number] = useState('');
+export default function Verification({navigation, route}: any) {
+  const {value} = route.params;
 
   return (
     <Container>
@@ -13,9 +23,16 @@ export default function Verification({navigation}: any) {
       </Back>
       <CardContainer>
         <Title>Verification</Title>
-        <Information>Enter 4 digit code we sent to {number}</Information>
+        <Information>Enter 4 digit code we sent to {value}</Information>
         <CodeVerification />
+        <Coutdown />
       </CardContainer>
+      <FooterContainer>
+        <ButtonContinue
+          onPress={() => navigation.navigate('InformationPessoal')}>
+          <TextContinue>Continue</TextContinue>
+        </ButtonContinue>
+      </FooterContainer>
     </Container>
   );
 }

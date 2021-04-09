@@ -1,26 +1,29 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Container} from './styles';
 import PhoneInput from 'react-native-phone-number-input';
 import {Dimensions} from 'react-native';
 
 const {width} = Dimensions.get('window');
 
-export default function CountrySelect() {
-  const [value, setValue] = useState('');
-  const [formattedValue, setFormattedValue] = useState('');
+interface Props {
+  onChangeText: (text: string) => void;
+  onChangeFormattedValue: (text: string) => void;
+  defaultValue: string;
+}
 
+export default function CountrySelect({
+  onChangeText,
+  onChangeFormattedValue,
+  defaultValue,
+}: Props) {
   return (
     <Container>
       <PhoneInput
-        defaultValue={value}
+        defaultValue={defaultValue}
         defaultCode="BR"
         layout="first"
-        onChangeText={(text) => {
-          setValue(text);
-        }}
-        onChangeFormattedText={(text) => {
-          setFormattedValue(text);
-        }}
+        onChangeText={onChangeText}
+        onChangeFormattedText={onChangeFormattedValue}
         withShadow
         autoFocus
         placeholder="Número de telefone"
@@ -36,9 +39,10 @@ export default function CountrySelect() {
           color: '#29304D',
         }}
         codeTextStyle={{
-          fontSize: 16,
+          fontSize: 15,
           fontFamily: 'Poppins-SemiBold',
           color: '#29304D',
+          marginTop: 3,
         }}
       />
     </Container>

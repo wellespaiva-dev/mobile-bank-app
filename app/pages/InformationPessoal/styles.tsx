@@ -1,8 +1,8 @@
+import {Dimensions} from 'react-native';
 import styled from 'styled-components/native';
 import colors from '../../assets/colors';
-import {Dimensions} from 'react-native';
 
-const {width, height} = Dimensions.get('window');
+const {height, width} = Dimensions.get('window');
 
 export const Container = styled.SafeAreaView`
   flex: 1;
@@ -25,7 +25,7 @@ export const Title = styled.Text`
 `;
 
 export const Information = styled.Text`
-  font-size: 13px;
+  font-size: 14px;
   font-family: 'Poppins-Medium';
   color: ${colors.darkGray};
 `;
@@ -53,4 +53,9 @@ export const TextContinue = styled.Text`
   font-family: 'Poppins-SemiBold';
   font-size: 15px;
   color: ${colors.white};
+`;
+
+export const FormContainer = styled.ScrollView`
+  margin-bottom: 20px;
+  flex: 1;
 `;

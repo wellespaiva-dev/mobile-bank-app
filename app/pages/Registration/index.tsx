@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 import {
   Container,
@@ -20,6 +20,13 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import CountrySelect from '../../components/CountrySelect';
 
 export default function Registration({navigation}: any) {
+  const [value, setValue] = useState('');
+  const [valueFormatted, setValueFormatted] = useState('');
+
+  useEffect(() => {
+    console.log(valueFormatted);
+  }, [value, valueFormatted]);
+
   return (
     <Container>
       <Back onPress={() => navigation.navigate('SignIn')}>
@@ -30,10 +37,17 @@ export default function Registration({navigation}: any) {
         <Information>Enter your mobile number, we will send</Information>
         <Information>you OTP to verify later</Information>
         <Information2>Enter your location and Phone</Information2>
-        <CountrySelect />
+        <CountrySelect
+          onChangeText={(text: string) => setValue(text)}
+          onChangeFormattedValue={(text: string) => setValueFormatted(text)}
+          defaultValue={value}
+        />
       </CardContainer>
       <FooterContainer>
-        <ButtonStart onPress={() => navigation.navigate('Verification')}>
+        <ButtonStart
+          onPress={() =>
+            navigation.navigate('Verification', {value: valueFormatted})
+          }>
           <TextStart>Start Using</TextStart>
         </ButtonStart>
         <Information3>By clicking start you agree to our</Information3>

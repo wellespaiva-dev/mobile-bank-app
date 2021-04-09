@@ -1,12 +1,13 @@
 import styled from 'styled-components/native';
 import {Dimensions} from 'react-native';
+import colors from '../../assets/colors';
 
 const {width} = Dimensions.get('window');
 
 export const Container = styled.SafeAreaView`
   flex: 1;
   align-items: center;
-  background: #f7f9fc;
+  background: ${colors.lightGray};
 `;
 
 export const Logo = styled.Image`
@@ -24,13 +25,13 @@ export const ContainerText = styled.View`
 export const Texto1 = styled.Text`
   font-size: 27px;
   font-family: 'Poppins-SemiBold';
-  color: #29304d;
+  color: ${colors.darkGray};
 `;
 
 export const Texto2 = styled.Text`
   font-size: 14px;
   font-family: 'Poppins-Regular';
-  color: #29304d;
+  color: ${colors.darkGray};
 `;
 
 export const ButtonCreateAccount = styled.TouchableOpacity`
@@ -38,14 +39,14 @@ export const ButtonCreateAccount = styled.TouchableOpacity`
   justify-content: center;
   width: ${width - 30}px;
   height: 50px;
-  background: #2573d5;
+  background: ${colors.blue};
   border-radius: 8px;
 `;
 
 export const TextCreateAccount = styled.Text`
   font-family: 'Poppins-SemiBold';
   font-size: 15px;
-  color: #fff;
+  color: ${colors.white};
 `;
 
 export const ButtonLogin = styled.TouchableOpacity`
@@ -59,5 +60,5 @@ export const ButtonLogin = styled.TouchableOpacity`
 export const TextLogin = styled.Text`
   font-family: 'Poppins-SemiBold';
   font-size: 15px;
-  color: #2573d5;
+  color: ${colors.blue};
 `;

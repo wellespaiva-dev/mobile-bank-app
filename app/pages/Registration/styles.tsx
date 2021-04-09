@@ -1,11 +1,12 @@
 import styled from 'styled-components/native';
 import {Dimensions} from 'react-native';
+import colors from '../../assets/colors';
 
 const {width, height} = Dimensions.get('window');
 
 export const Container = styled.SafeAreaView`
   flex: 1;
-  background: #f7f9fc;
+  background: ${colors.lightGray};
 `;
 
 export const Back = styled.TouchableOpacity`
@@ -18,22 +19,22 @@ export const CardContainer = styled.View`
 `;
 
 export const Title = styled.Text`
-  font-size: 27px;
-  color: #29304d;
+  font-size: 25px;
+  color: ${colors.darkGray};
   font-family: 'Poppins-SemiBold';
 `;
 
 export const Information = styled.Text`
   font-size: 14px;
   font-family: 'Poppins-Medium';
-  color: #29304d;
+  color: ${colors.darkGray};
 `;
 
 export const Information2 = styled.Text`
   margin-top: 30px;
   font-size: 14px;
   font-family: 'Poppins-Regular';
-  color: #29304d;
+  color: ${colors.darkGray};
 `;
 
 export const FooterContainer = styled.View`
@@ -51,33 +52,33 @@ export const ButtonStart = styled.TouchableOpacity`
   justify-content: center;
   width: ${width - 30}px;
   height: 50px;
-  background: #2573d5;
+  background: ${colors.blue};
   border-radius: 8px;
 `;
 
 export const TextStart = styled.Text`
   font-family: 'Poppins-SemiBold';
   font-size: 15px;
-  color: #fff;
+  color: ${colors.white};
 `;
 
 export const Information3 = styled.Text`
   margin-top: 12px;
   font-size: 11px;
   font-family: 'Poppins-Medium';
-  color: #29304d;
+  color: ${colors.darkGray};
 `;
 
 export const ButtonPrivacyPolicy = styled.TouchableOpacity`
   align-items: center;
   justify-content: center;
   border-bottom-width: 1px;
-  border-color: #2573d5;
+  border-color: ${colors.blue};
   margin-bottom: 2px;
 `;
 
 export const TextPrivacyPolicy = styled.Text`
   font-size: 11px;
   font-family: 'Poppins-Medium';
-  color: #2573d5;
+  color: ${colors.darkGray};
 `;
