@@ -1,8 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import {Container, TimeInformation, Time} from './styles';
 
-export default function Coutdown() {
-  const [time, setTime] = useState(0.5 * 60);
+interface Props {
+  tempo: number;
+}
+
+export default function Coutdown({tempo}: Props) {
+  const [time, setTime] = useState(tempo);
   const minutos = Math.floor(time / 60);
   const seconds = time % 60;
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   Container,
   Back,
@@ -16,6 +16,8 @@ import Coutdown from '../../components/Countdown';
 export default function Verification({navigation, route}: any) {
   const {value} = route.params;
 
+  const [time] = useState(0.5 * 60);
+
   return (
     <Container>
       <Back onPress={() => navigation.navigate('Registration')}>
@@ -25,7 +27,7 @@ export default function Verification({navigation, route}: any) {
         <Title>Verification</Title>
         <Information>Enter 4 digit code we sent to {value}</Information>
         <CodeVerification />
-        <Coutdown />
+        <Coutdown tempo={time} />
       </CardContainer>
       <FooterContainer>
         <ButtonContinue

@@ -30,7 +30,7 @@ export const Texto1 = styled.Text`
 
 export const Texto2 = styled.Text`
   font-size: 14px;
-  font-family: 'Poppins-Regular';
+  font-family: 'Poppins-Medium';
   color: ${colors.darkGray};
 `;
 

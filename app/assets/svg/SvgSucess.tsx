@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Svg, {SvgProps, Path} from 'react-native-svg';
 
-function SvgSucess2(props: SvgProps) {
+function SvgSucess(props: SvgProps) {
   return (
     <Svg viewBox="0 0 415.869 415.869" {...props}>
       <Path
@@ -16,4 +16,4 @@ function SvgSucess2(props: SvgProps) {
   );
 }
 
-export default SvgSucess2;
+export default SvgSucess;

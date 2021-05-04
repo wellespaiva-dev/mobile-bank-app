@@ -24,7 +24,7 @@ export default function SignIn({navigation}: any) {
       <ButtonCreateAccount onPress={() => navigation.navigate('CreateAccount')}>
         <TextCreateAccount>Create account</TextCreateAccount>
       </ButtonCreateAccount>
-      <ButtonLogin>
+      <ButtonLogin onPress={() => navigation.navigate('TabNavigation')}>
         <TextLogin>Login to Account</TextLogin>
       </ButtonLogin>
     </Container>
