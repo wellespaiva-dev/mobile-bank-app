@@ -14,9 +14,10 @@ $ yarn install
 
 Runs next which starts app in development mode
 
-bash
+bash: 
 $ yarn start
-//Open other terminal:
+
+Open other terminal: 
 $ yarn android
 
 
